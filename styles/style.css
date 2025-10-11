@@ -86,7 +86,6 @@
  ██  ██  ██   ██ ██   ██ ██ ██   ██ ██   ██ ██      ██           ██ 
   ████   ██   ██ ██   ██ ██ ██   ██ ██████  ███████ ███████ ███████ 
 */
-
 /* ------------------------------- */
 /* 🎨 Theme Design Variables */
 /* Use CSS variables to quickly change your site's color scheme and typography */
@@ -99,15 +98,15 @@
 
 :root {
   /* Typography */
-  --font-family-body: "Space Grotesk", sans-serif;
-  --font-family-heading: "Space Grotesk", serif;
-  --font-family-project-title: "Space Grotesk", serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-scribble: "Cedarville Cursive", cursive;
+  /* --font-pixel: ""; */
   /* Core Colours */
   --color-text-primary: #222;
   --color-text-secondary: #333;
   --color-accent-primary: #ccff75;
   --color-accent-secondary: #ff057c;
-  --color-overlay-primary: rgba(82, 0, 255, 0.5);
+  --color-overlay-primary: rgba(204, 255, 117, 0.9);
   --color-highlight: lemonchiffon;
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
@@ -125,7 +124,7 @@
   /* Special Text Colours */
   --color-text-holding-title: #ebedf0;
   --color-text-project-category: #ffffff;
-  --color-text-project-description: #222;
+  --color-text-project-description: #ffffff;
   --color-text-project-sidebar: #222;
   --color-text-project-title: #5200ff;
   --color-text-work-grid-title: #ffffff;
@@ -143,7 +142,7 @@
   /* Components */
   --color-bg-full-width: #f5f5f5;
   --color-bg-project-description: #f5f5f5;
-  --color-bg-sidebar-project: orangered;
+  --color-bg-sidebar-project: transparent;
   --color-bg-sidebar-work: lemonchiffon;
   --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
   --color-gradient-project-details: linear-gradient(
@@ -683,6 +682,7 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: column;
 }
+
 .hero-header {
   min-height: 6rem; /* Space reserved for logo + nav */
 }
@@ -691,8 +691,9 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--padding-small);
+  padding: var(--padding-tiny);
   align-items: center;
+  background-color: var(--color-accent-primary);
 }
 
 .nav-branding-group {
@@ -1175,9 +1176,6 @@ a.nav-link-primary:hover {
 .project-details {
   width: 100%;
   padding: var(--padding-small);
-  background: var(
-    --color-gradient-project-details
-  ); /* TODO: Remove gradient background if you prefer a simpler design */
 }
 
 /* Previous/Next Arrow Styles */
