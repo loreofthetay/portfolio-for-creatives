@@ -32,11 +32,14 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Space Grotesk Font (for headers or special text) */
+/* Space Grotesk Font (for headers or body font) */
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
-/* Cedarville Cursive Font (for headers or special text) */
+/* Cedarville Cursive Font (for special text) */
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+/* Jacquard 12 Font (for special text) */
+@import url("https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap");
 
 /*
 
@@ -100,7 +103,7 @@
   /* Typography */
   --font-body: "Space Grotesk", sans-serif;
   --font-scribble: "Cedarville Cursive", cursive;
-  /* --font-pixel: ""; */
+  --font-pixel: "Jacquard 12", system-ui;
   /* Core Colours */
   --color-text-primary: #222;
   --color-text-secondary: #333;
@@ -218,7 +221,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family-body);
+  font-family: var(--font-body);
   color: var(--color-text-primary);
   background: var(--color-bg);
   display: flex;
@@ -446,7 +449,7 @@ svg {
 
 h1 {
   font-size: 2.2rem;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-body);
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h1-color);
@@ -454,7 +457,7 @@ h1 {
 
 h2 {
   font-size: 2rem;
-  font-family: var(--font-family-heading);
+  font-family: var(--font-body);
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h2-color);
