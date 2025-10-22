@@ -106,7 +106,7 @@
   --font-pixel: "Jacquard 12", system-ui;
   /* Core Colours */
   --color-text-primary: #222;
-  --color-text-secondary: #333;
+  --color-text-secondary: #ccff75;
   --color-accent-primary: #ccff75;
   --color-accent-secondary: #ff057c;
   --color-overlay-primary: rgba(204, 255, 117, 0.9);
@@ -114,8 +114,7 @@
   --color-fallback: #ff057c; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
   --color-bg: #232721;
-  --color-bg-about: #f5f5f5;
-  --color-bg-footer: #f5f5f5;
+  --color-bg-footer: #ccff75;
   --color-bg-holding-page: rgba(82, 0, 255, 0.6);
   /* Headings */
   --h1-color: #ccff75;
@@ -136,7 +135,7 @@
   --color-link-hover: #111;
   --color-link-visited: #5200ff;
   /* Navigation */
-  --color-nav-link: #5200ff;
+  --color-nav-link: #232721;
   --color-nav-link-hover: #321575;
   --color-nav-arrow: #5200ff;
   --color-nav-arrow-hover: #000;
@@ -157,7 +156,7 @@
   /* Special Elements */
   --color-icon-heart: darkred;
   --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #5200ff;
+  --color-bg-selection: #b9f157;
   --color-shadow-stroke: rgba(0, 0, 0, 0.4);
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
@@ -171,7 +170,7 @@
   --radius-lg: 2rem; /* Large decorative elements */
   --radius-full: 50%; /* Circles/pills */
   /* Padding Scale */
-  --padding-tiny: 0.5rem; /* Micro-spacing: icon padding, toggle switches */
+  --padding-tiny: 0rem 1rem; /* Micro-spacing: icon padding, toggle switches */
   --padding-small: 1rem; /* Compact spacing: mobile buttons, form tags */
   --padding-medium: 2rem; /* Standard spacing: desktop buttons, card content */
   --padding-large: 3rem; /* Section spacing: content blocks, banner padding */
@@ -687,14 +686,14 @@ a.nav-link-primary:hover {
 }
 
 .hero-header {
-  min-height: 6rem; /* Space reserved for logo + nav */
+  min-height: 5rem; /* Space reserved for logo + nav */
 }
 
 .nav-branding {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: var(--padding-tiny);
+  padding: var(--padding-small);
   align-items: center;
   background-color: var(--color-accent-primary);
 }
@@ -704,7 +703,11 @@ a.nav-link-primary:hover {
   flex-direction: row;
 }
 .nav-branding-item {
+  font-size: 1.3rem;
   padding: var(--padding-tiny);
+}
+.nav-branding-items {
+  padding: 0rem;
 }
 
 .nav-branding-logo {
@@ -720,10 +723,14 @@ a.nav-link-primary:hover {
   gap: 3rem;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-small);
   text-align: center; /* Keeps text centered */
+  background: url(../assets/landing-page/landing-page-bg.jpg);
+  background-repeat: no-repeat;
 }
-
+.hero-image {
+  width: 100%;
+  z-index: 1;
+}
 .hero-icon {
   font-size: 4rem;
 }
@@ -949,7 +956,7 @@ a.nav-link-primary:hover {
   display: grid; /* Set to grid layout */
   grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
   grid-gap: 3rem; /* Space between grid items */
-  background: var(--color-bg-about); /* Background color for the section */
+  background: var(--color-bg); /* Background color for the section */
   padding: var(--padding-small); /* Padding around the grid */
   flex: 1; /* Flex-grow to take up available space */
 }
@@ -962,6 +969,7 @@ a.nav-link-primary:hover {
 
 /* Text section in the About page grid */
 .about-grid-text {
+  color: var(--color-text-secondary);
   grid-column: 1 / 2; /* Text spans the first column */
   grid-row: 2 / 3; /* Text spans the second row */
 }
@@ -1452,12 +1460,13 @@ to keep your styles reusable and consistent.
   }
 
   .nav-branding-logo {
-    width: 5rem;
+    width: 3.5rem;
+    margin: 0rem 1rem;
     /* TODO: Adjust the width of the logo on large devices here. */
   }
 
   .hero {
-    min-height: 100vh;
+    min-height: 120vh;
   }
 
   .hero-headline-wrapper {
@@ -1638,7 +1647,7 @@ to keep your styles reusable and consistent.
   /* TODO: Add styles here for X-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   }
 }
 
@@ -1648,7 +1657,7 @@ to keep your styles reusable and consistent.
   /* TODO: Add styles here for XX-large devices. */
 
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   }
 }
 
