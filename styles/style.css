@@ -109,11 +109,11 @@
   --color-text-secondary: #ccff75;
   --color-accent-primary: #ccff75;
   --color-accent-secondary: #232721;
-  --color-overlay-primary: rgba(204, 255, 117, 0.9);
+  --color-overlay-primary: rgba(0, 0, 0, 0.8);
   --color-highlight: ff4d4b;
   --color-fallback: #232721; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #232721;
+  --color-bg: #000000;
   --color-bg-footer: #ccff75;
   --color-bg-holding-page: #ccff75;
   /* Headings */
@@ -524,7 +524,8 @@ sup {
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
-  font-size: 12rem;
+  font-size: 11rem;
+  line-height: 10rem;
 }
 
 /* Large project title — appears on individual project pages */
@@ -565,12 +566,12 @@ sup {
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
   font-size: 2.875rem;
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
 }
 
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
-  color: var(--color-text-primary);
+  color: var(--color-text-secondary);
 }
 
 /*
@@ -716,7 +717,7 @@ a.nav-link-primary:hover {
 
 .hero-headline-wrapper {
   width: 100%;
-  min-height: 110vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -822,6 +823,8 @@ a.nav-link-primary:hover {
 /* Work wrapper (takes up available space) */
 .main-work-section {
   flex: 1;
+  background-color: var(--color-accent-primary);
+  padding: 3rem 0;
 }
 
 /* Padding around work grid and project page */
@@ -956,6 +959,7 @@ a.nav-link-primary:hover {
 
 /* Grid container for the About section */
 .about-grid {
+  min-height: 80vh;
   display: grid; /* Set to grid layout */
   grid-template-columns: 1fr; /* Single column layout for mobile and smaller screens */
   grid-gap: 3rem; /* Space between grid items */
@@ -977,6 +981,12 @@ a.nav-link-primary:hover {
   grid-row: 2 / 3; /* Text spans the second row */
 }
 
+.about-text {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .about-image {
   border: 0.1rem solid var(--color-accent-primary);
 }
@@ -1493,8 +1503,8 @@ to keep your styles reusable and consistent.
   }
 
   .hero-headline-wrapper {
-    padding-top: var(--padding-jumbo);
-    padding-bottom: var(--padding-jumbo);
+    padding-top: var(--padding-medium);
+    padding-bottom: var(--padding-medium);
     padding-left: var(--padding-ultra);
     padding-right: var(--padding-ultra);
   }
