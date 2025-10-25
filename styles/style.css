@@ -124,22 +124,22 @@
   --h5-color: #ccff75;
   --h6-color: #ccff75;
   /* Special Text Colours */
-  --color-text-holding-title: #ebedf0;
-  --color-text-project-category: #ffffff;
-  --color-text-project-description: #ffffff;
+  --color-text-holding-title: #ccff75;
+  --color-text-project-category: #ccff75;
+  --color-text-project-description: #ccff75;
   --color-text-project-sidebar: #222;
-  --color-text-project-title: #5200ff;
-  --color-text-work-grid-title: #ffffff;
+  --color-text-project-title: #ccff75;
+  --color-text-work-grid-title: #ccff75;
   /* Link States */
   --color-link: #232721;
   --color-link-hover: #111;
   --color-link-visited: #232721;
   /* Navigation */
   --color-nav-link: #232721;
-  --color-nav-link-hover: #321575;
-  --color-nav-arrow: #5200ff;
-  --color-nav-arrow-hover: #232721;
-  --color-nav-arrow-stroke: #5200ff;
+  --color-nav-link-hover: #111;
+  --color-nav-arrow: #ccff75;
+  --color-nav-arrow-hover: #b9f157;
+  --color-nav-arrow-stroke: #ccff75;
   --color-nav-arrow-stroke-hover: #232721;
   /* Components */
   --color-bg-full-width: #232721;
@@ -993,6 +993,14 @@ a.nav-link-primary:hover {
 .about-quote {
   font-style: italic;
 }
+.about-header-text {
+  text-transform: none;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+.about-span {
+  display: block;
+}
 /* 
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -1016,6 +1024,10 @@ a.nav-link-primary:hover {
   background: var(--color-bg-footer); /* Using CSS variable for theming */
 
   /* Note: Using 'fr' units ensures proper scaling across devices */
+}
+
+.footer-text {
+  color: var(--color-text-secondary);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -1195,7 +1207,6 @@ a.nav-link-primary:hover {
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  background: var(--color-bg-project-description);
   padding: var(--padding-small);
   width: 100%;
   margin-bottom: 1rem; /* Space below the description */
@@ -1206,6 +1217,11 @@ a.nav-link-primary:hover {
 .col-4 {
   width: 100%;
   padding: var(--padding-small);
+}
+
+.project-description-text {
+  color: var(--color-text-secondary);
+  padding-bottom: var(--padding-small);
 }
 
 /* Project image styling */
@@ -1304,9 +1320,8 @@ a.nav-link-primary:hover {
 ---------------------------------------------------------------- */
 
 .holding-page-animation {
-  width: 10rem;
+  width: 20rem;
   margin: 0 auto;
-  margin-bottom: 3rem;
 }
 
 .holding-page-title {
