@@ -524,7 +524,6 @@ sup {
   max-width: 40ch; /* Optimal line length for readability (~40 characters) */
   text-wrap: balance; /* Prevents awkward line breaks (like elegant typography) */
   margin-inline: auto; /* Horizontally centers the text in its container */
-  font-size: 11rem;
   line-height: 10rem;
 }
 
@@ -565,12 +564,13 @@ sup {
 
 /* 📂 Project grid title — used in grid view (like a portfolio gallery) */
 .work-grid-project-title {
-  font-size: 2.875rem;
+  font-size: 1.3rem;
   color: var(--color-text-secondary);
 }
 
 /* 🏷️ Project category label — displays the type or role of the project */
 .work-grid-project-category {
+  font-size: 0.6rem;
   color: var(--color-text-secondary);
 }
 
@@ -712,6 +712,7 @@ a.nav-link-primary:hover {
 
 .nav-branding-logo {
   width: 3rem;
+  margin-bottom: 0.5rem;
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
@@ -851,13 +852,8 @@ a.nav-link-primary:hover {
 
 /* Defining the work page grid */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Creates a responsive grid */
-  grid-gap: 1rem; /* Space between grid items */
-  /* The auto-fit and minmax() function help ensure responsiveness across screen sizes */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Individual Work Grid Item */
@@ -866,6 +862,7 @@ a.nav-link-primary:hover {
   width: 100%;
   height: auto;
   position: relative; /* Needed to position the overlay */
+  margin: 0.5rem;
 }
 /* Masonry Overlay Text */
 .overlay-container:hover .overlay {
@@ -1017,12 +1014,12 @@ a.nav-link-primary:hover {
 /* -------------------------------------------------------------------------- */
 
 .footer-global {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  grid-gap: 3rem; /* Consistent spacing between sections */
-  min-height: auto; /* Allows footer to expand based on content, no fixed height */
+  padding-top: var(--padding-medium);
+  padding-right: var(--padding-small);
+  padding-bottom: var(--padding-small);
+  padding-left: var(--padding-small);
+  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
   background: var(--color-bg-footer); /* Using CSS variable for theming */
-
   /* Note: Using 'fr' units ensures proper scaling across devices */
 }
 
@@ -1077,8 +1074,9 @@ a.nav-link-primary:hover {
 }
 
 .footer-social-item {
-  padding-left: 2rem;
-  text-align: right;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  text-align: left;
 }
 
 .footer-social-link {
@@ -1432,6 +1430,10 @@ to keep your styles reusable and consistent.
 
 @media (min-width: 768px) {
   /* TODO: Adjust  layout for tablets */
+  /* .grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+  } */
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -1441,6 +1443,10 @@ to keep your styles reusable and consistent.
 @media (min-width: 992px) {
   /* TODO: Add or adjust styles here for large devices. */
 
+  /* .grid {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 1rem;
+  } */
   .flex-row {
     flex-direction: row; /* Changes to row layout on larger screens */
   }
@@ -1456,7 +1462,7 @@ to keep your styles reusable and consistent.
   }
 
   h1 {
-    font-size: 9rem;
+    font-size: 11rem;
   }
 
   h2 {
@@ -1536,11 +1542,16 @@ to keep your styles reusable and consistent.
 
   /* Work Page Grid for Large Devices */
 
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
+  .work-page-grid-item,
+  .overlay-container {
+    margin: 1rem;
   }
-
+  .work-grid-project-title {
+    font-size: 2.875rem;
+  }
+  .work-grid-project-category {
+    font-size: 1.2rem;
+  }
   /* Grayscale filter with full-colour on hover and tap */
 
   .work-page-grid-item a.grayscale img {
@@ -1665,6 +1676,11 @@ to keep your styles reusable and consistent.
     grid-column: 3 / 4;
   }
 
+  .footer-social-item {
+    padding-left: 2rem;
+    text-align: right;
+  }
+
   /* ------------------------------- */
   /* 📏 FULL-WIDTH BOTTOM SECTION */
   /* ------------------------------- */
@@ -1696,10 +1712,10 @@ to keep your styles reusable and consistent.
 
 @media (min-width: 1200px) {
   /* TODO: Add styles here for X-large devices. */
-
+  /* 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-  }
+  } */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -1707,9 +1723,9 @@ to keep your styles reusable and consistent.
 @media (min-width: 1400px) {
   /* TODO: Add styles here for XX-large devices. */
 
-  .grid {
+  /* .grid {
     grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
-  }
+  } */
 }
 
 /*
