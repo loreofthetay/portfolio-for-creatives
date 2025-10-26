@@ -92,34 +92,43 @@
         </figure>
       </main>
     </div>
-    <div class="footer-global-wrapper">
-      <h2>Minimal Footer</h2>
-      <div class="footer-full-width">
-        <p class="footer-fineprint">
-          &copy; 2020-2025. Hand crafted with
-          <span class="heart">❤</span>
-          by James Neufeld.
-        </p>
-      </div>
-    </div>
+    <ul class="footer-global">
+      <li class="footer-tagline">
+        <p class="footer-tagline-size">Contact me...</p>
+        <p class="footer-tagline-size">or not, no pressure.</p>
+      </li>
 
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-1.html">Previous Project</a>
-    </div>
+      <li class="footer-contact-social">
+        <ul class="footer-socials-list">
+          <li class="footer-item footer-social-item">
+            <a
+              href="https://www.linkedin.com/in/taylore-lawrence-a94b76387/"
+              class="footer-social-link"
+              >LinkedIn</a
+            >
+          </li>
+          <li class="footer-item footer-social-item">
+            <a href="#" class="footer-social-link">Behance</a>
+          </li>
+          <li class="footer-item footer-social-item">
+            <a
+              href="mailto:taylorealawrence@gmail.com"
+              class="footer-social-link"
+              >Email</a
+            >
+          </li>
+        </ul>
+      </li>
 
-    <script type="text/javascript">
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
-    </script>
+      <li class="footer-full-width">
+        <h4 class="footer-fineprint">
+          &copy; <span id="copyright-years">2025-</span> Taylore Lawrence
+        </h4>
+        <script>
+          document.getElementById("copyright-years").textContent +=
+            new Date().getFullYear();
+        </script>
+      </li>
+    </ul>
   </body>
 </html>
