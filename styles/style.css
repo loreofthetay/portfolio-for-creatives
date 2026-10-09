@@ -32,16 +32,11 @@
 /* TODO: Replace these Google Fonts with the ones you want to use on your site. */
 /* Remember, the more fonts you load, the longer it can take for your page to load. */
 
-/* Host Grotesk Font (for headers or body font) */
-@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap");
+/* Space Grotesk Font (for headers or body font) */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
 
 /* Chelsea Market (for special characters) */
 @import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
-
-/* Jacquard 12 Font (for special text) */
-@import url("https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap");
-
-/*
 
 /* 
 ██ ███    ███ ██████   ██████  ██████  ████████      ██████ ███████ ███████ 
@@ -58,23 +53,8 @@
 
 /* TODO: Delete any stylesheets you don't plan to use on your site. */
 
-/* File for animation effects that make elements move (e.g., flying) */
-@import url("make-something-fly.css");
-
-/* File for animation effects that make elements blink */
-@import url("make-something-blink.css");
-
-/* File for adding a smooth animated gradient background */
-@import url("animated-gradient.css");
-
-/* File for adding a glitch animation to your 404 error page */
-@import url("error.css");
-
 /* File for adding text stroke (outline) effect */
 @import url("text-stroke.css");
-
-/* File for adding stroke shadow effect around text */
-@import url("stroke-shadow.css");
 
 /* File with extra experimental styles (e.g., fun animations or effects) */
 @import url("experiments.css");
@@ -103,71 +83,40 @@
   /* Typography */
   --font-body: "Space Grotesk", sans-serif;
   --font-scribble: "Cedarville Cursive", cursive;
-  --font-pixel: "Jacquard 12", system-ui;
   /* Core Colours */
-  --color-text-primary: #232721;
-  --color-text-secondary: #ccff75;
-  --color-accent-primary: #ccff75;
-  --color-accent-secondary: #232721;
+  --color-text-primary: #bbdf10;
+  --color-accent-primary: #bbdf10;
   --color-overlay-primary: rgba(0, 0, 0, 0.8);
   --color-highlight: ff4d4b;
-  --color-fallback: #232721; /* Fallback color for glitch effect on 404 page */
+  --color-fallback: #bbdf10; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
-  --color-bg: #000000;
-  --color-bg-footer: #ccff75;
-  --color-bg-holding-page: #ccff75;
+  --color-bg: #131313;
+  --color-bg-footer: #131313;
+  --color-bg-holding-page: #131313;
   /* Headings */
-  --h1-color: #ccff75;
-  --h2-color: #ccff75;
-  --h3-color: #232721;
-  --h4-color: #232721;
-  --h5-color: #ccff75;
-  --h6-color: #ccff75;
-  /* Special Text Colours */
-  --color-text-holding-title: #ccff75;
-  --color-text-project-category: #ccff75;
-  --color-text-project-description: #ccff75;
-  --color-text-project-sidebar: #222;
-  --color-text-project-title: #ccff75;
-  --color-text-work-grid-title: #ccff75;
+  --h1-color: #bbdf10;
+  --h2-color: #bbdf10;
+  --h3-color: #bbdf10;
+  --h4-color: #bbdf10;
+  --h5-color: #bbdf10;
+  --h6-color: #bbdf10;
   /* Link States */
-  --color-link: #232721;
-  --color-link-hover: #111;
-  --color-link-visited: #232721;
+  --color-link: #bbdf10;
+  --color-link-hover: #ccff75;
+  --color-link-visited: #bbdf10;
   /* Navigation */
-  --color-nav-link: #232721;
-  --color-nav-link-hover: #111;
-  --color-nav-arrow: #ccff75;
+  --color-nav-link: #bbdf10;
+  --color-nav-link-hover: #ccff75;
+  --color-nav-arrow: #bbdf10;
   --color-nav-arrow-hover: #b9f157;
-  --color-nav-arrow-stroke: #ccff75;
-  --color-nav-arrow-stroke-hover: #232721;
-  /* Components */
-  --color-bg-full-width: #232721;
-  --color-bg-project-description: #232721;
-  --color-bg-sidebar-project: transparent;
-  --color-bg-sidebar-work: #232721;
-  --color-gradient-hero: linear-gradient(90deg, #ff00ff, #00ffff);
-  --color-gradient-project-details: linear-gradient(
-    -225deg,
-    #ff057c 0%,
-    #8d0b93 50%,
-    #321575 100%
-  );
-  /* Special Elements */
-  --color-text-holding-footer: #f8f8ff;
-  --color-bg-selection: #b9f157;
-  --color-shadow-stroke: rgba(0, 0, 0, 0.4);
+  --color-nav-arrow-stroke: #bbdf10;
+  --color-nav-arrow-stroke-hover: #bbdf10;
   /* Assets */
   --image-noise-texture: url(/assets/temp/noise.svg);
   /* Animation Durations */
   --duration-fast: 0.15s; /* Quick interactions (hover states) */
   --duration-normal: 0.3s; /* Standard transitions (button clicks) */
   --duration-slow: 0.75s; /* Prominent animations (page transitions) */
-  /* Rounded Corners */
-  --radius-sm: 0.5rem; /* Small interactive elements */
-  --radius-md: 1rem; /* Cards/containers */
-  --radius-lg: 2rem; /* Large decorative elements */
-  --radius-full: 50%; /* Circles/pills */
   /* Padding Scale */
   --padding-tiny: 0rem 1rem; /* Micro-spacing: icon padding, toggle switches */
   --padding-small: 1.4rem; /* Compact spacing: mobile buttons, form tags */
@@ -306,20 +255,6 @@ svg {
   text-align: center;
 }
 
-/* ------------------------------ */
-/* 🌀 Animation & Interaction Tools */
-/* ------------------------------ */
-
-/* Smooth transition when applying transformations – improves hover experience */
-.rotate {
-  transition: transform 0.3s ease;
-}
-
-/* Rotates the element slightly on hover – adds a playful effect */
-.rotate:hover {
-  transform: rotate(4deg);
-}
-
 /* ----------------------------- */
 /* 📦 Padding Utilities (Mobile First) */
 /* ----------------------------- */
@@ -416,19 +351,6 @@ svg {
   right: 0;
   width: 100%;
   height: 100%;
-}
-
-/* ---------------------------------------- */
-/* 🧭 Responsive Navigation (Coming Soon)   */
-/* This section is in progress — you'll build a mobile-friendly nav bar here */
-/* ---------------------------------------- */
-
-.responsive-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background: lightblue;
-  padding: var(--padding-small);
 }
 
 /* ------------------------------------------------------------------ */
@@ -696,7 +618,7 @@ a.nav-link-primary:hover {
   justify-content: space-between;
   padding: var(--padding-small);
   align-items: center;
-  background-color: var(--color-accent-primary);
+  background-color: var(--color-bg);
 }
 
 .nav-branding-group {
@@ -705,6 +627,7 @@ a.nav-link-primary:hover {
 }
 .nav-branding-item {
   font-size: 1.3rem;
+  text-transform: lowercase;
   padding: var(--padding-tiny);
 }
 .nav-branding-items {
@@ -727,13 +650,14 @@ a.nav-link-primary:hover {
   align-items: center;
   justify-content: center;
   text-align: center; /* Keeps text centered */
-  background: url(../assets/landing-page/landing-page-bg.jpg);
-  background-repeat: no-repeat;
+  /* background: url(../assets/landing-page/landing-page-bg.jpg);
+  background-repeat: no-repeat;*/
 }
-.hero-image {
-  width: 100%;
-  z-index: 1;
+
+.wordmark {
+  width: 150rem;
 }
+
 .hero-icon {
   font-size: 4rem;
 }
