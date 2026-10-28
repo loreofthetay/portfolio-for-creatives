@@ -369,8 +369,8 @@ svg {
 /* Heading Styles (h1 - h6) */
 
 h1 {
-  font-size: 3rem;
-  font-weight: 900;
+  font-size: 2.5rem;
+  font-weight: 500;
   font-family: var(--font-body);
   text-transform: lowercase;
   line-height: 1.2;
@@ -383,18 +383,21 @@ h2 {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h2-color);
+  text-transform: lowercase;
 }
 
 h3 {
   font-size: 1.325rem;
   line-height: 1.2;
   color: var(--h3-color);
+  text-transform: lowercase;
 }
 
 h4 {
   font-size: 1.2rem;
   line-height: 1.2;
   color: var(--h4-color);
+  text-transform: lowercase;
 }
 
 h5 {
@@ -402,6 +405,7 @@ h5 {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h5-color);
+  text-transform: lowercase;
 }
 
 h6 {
@@ -409,6 +413,7 @@ h6 {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--h6-color);
+  text-transform: lowercase;
 }
 
 /* ------------------------------------------------------------------ */
@@ -647,15 +652,13 @@ a.nav-link-primary:hover {
   flex-direction: column;
   flex: 1;
   gap: 3rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center; /* Keeps text centered */
-  /* background: url(../assets/landing-page/landing-page-bg.jpg);
-  background-repeat: no-repeat;*/
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1rem;
 }
 
 .wordmark {
-  width: 150rem;
+  width: 35rem;
 }
 
 .hero-icon {
@@ -748,39 +751,59 @@ a.nav-link-primary:hover {
 
 /* Work wrapper (takes up available space) */
 .main-work-section {
-  flex: 1;
-  background-color: var(--color-accent-primary);
-  padding: 3rem 0;
+  display: flex;
+  padding: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  align-self: stretch;
+}
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
 }
 
-/* Padding around work grid and project page */
-.portfolio,
-.project-wrapper,
-.work-sidebar-wrapper {
-  padding: var(
-    --padding-tiny
-  ); /* Padding to keep content from touching edges */
+.portfolio-piece-large {
+  border: 1px solid var(--color-accent-primary);
+  display: flex;
+  width: 59.6875rem;
+  height: 45rem;
+  padding: 2.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.625rem;
 }
 
-/* Work Sidebar on Mobile */
-.work-sidebar {
-  width: 100%;
-  background: var(
-    --color-bg-sidebar-work
-  ); /* Background color for the sidebar */
+.small-group {
+  display: flex;
+  width: 28.42263rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.125rem;
 }
 
-/* Main Work Area with Sidebar on Mobile */
-.work-details {
-  width: 100%;
+.portfolio-piece-small {
+  border: 1px solid var(--color-accent-primary);
+  display: flex;
+  height: 21.42856rem;
+  padding: 2.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 0.625rem;
+  align-self: stretch;
+  aspect-ratio: 126/95;
 }
-
-/* Defining the work page grid */
-.grid {
+.portfolio-text {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
 }
-
 /* Individual Work Grid Item */
 .work-page-grid-item,
 .overlay-container {
@@ -792,12 +815,6 @@ a.nav-link-primary:hover {
 /* Masonry Overlay Text */
 .overlay-container:hover .overlay {
   opacity: 1;
-}
-
-/* Project container for background and padding */
-.project-container {
-  background: var(--color-accent-primary); /* Set project background color */
-  padding: var(--padding-medium);
 }
 
 /* Overlay (appears on hover) */
@@ -830,39 +847,9 @@ a.nav-link-primary:hover {
   opacity: 1; /* Set opacity on hover */
 }
 
-/* Optional container for future overlay customization */
-.project-details-overlay {
-  /* Placeholder: no custom styles yet */
-}
 /* Moving Back to Top icon */
 .scroll-top {
   margin-bottom: 4.5rem;
-}
-/*
-
-███████ ██ ██████  ███████ ██████   █████  ██████  
-██      ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██   ██ █████   ██████  ███████ ██████  
-     ██ ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
-███████ ██ ██████  ███████ ██████  ██   ██ ██   ██ 
-                                                   
-                                                   
-*/
-
-/* -------------------------------------------------------------------------- */
-/* 🗂️ Sidebar Navigation Styles                                                 */
-/* This section contains styles for the sidebar navigation on the portfolio    */
-/* website. The aim is to create a simple and clean sidebar for better access. */
-/* -------------------------------------------------------------------------- */
-
-/* Sidebar navigation list styles */
-.sidebar-nav-list {
-  padding: var(--padding-small); /* Adds padding around the navigation list */
-}
-
-/* Individual navigation item styles */
-.sidebar-nav-item {
-  margin-bottom: 1rem; /* Space between each navigation item */
 }
 
 /* 
@@ -1326,23 +1313,6 @@ to keep your styles reusable and consistent.
 
 /*
 
-███████ ██   ██ ███████ ████████  ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
-██      ██  ██  ██         ██    ██      ██   ██ ██   ██ ██    ██ ██    ██ ██  ██  
-███████ █████   █████      ██    ██      ███████ ██████  ██    ██ ██    ██ █████   
-     ██ ██  ██  ██         ██    ██      ██   ██ ██   ██ ██    ██ ██    ██ ██  ██  
-███████ ██   ██ ███████    ██     ██████ ██   ██ ██████   ██████   ██████  ██   ██ 
-
-*/
-
-/* Sketchbook Page Styles */
-
-.sketchbook-page {
-  display: grid;
-  place-items: center;
-}
-
-/*
-
 ███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
 ████  ████ ██      ██   ██ ██ ██   ██     ██    ██ ██    ██ ██      ██   ██ ██ ██      ██      
 ██ ████ ██ █████   ██   ██ ██ ███████     ██    ██ ██    ██ █████   ██████  ██ █████   ███████ 
@@ -1453,8 +1423,8 @@ to keep your styles reusable and consistent.
   .hero-headline-wrapper {
     padding-top: var(--padding-medium);
     padding-bottom: var(--padding-medium);
-    padding-left: var(--padding-ultra);
-    padding-right: var(--padding-ultra);
+    padding-left: var(--padding-medium);
+    padding-right: var(--padding-medium);
   }
   .error-headline-wrapper {
     padding-top: var(--padding-small);
@@ -1474,10 +1444,10 @@ to keep your styles reusable and consistent.
     margin: 1rem;
   }
   .work-grid-project-title {
-    font-size: 2.875rem;
+    font-size: 2.5rem;
   }
   .work-grid-project-category {
-    font-size: 1.2rem;
+    font-size: 0.9375rem;
   }
   /* Grayscale filter with full-colour on hover and tap */
 
