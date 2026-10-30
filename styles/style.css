@@ -154,6 +154,7 @@
 html {
   box-sizing: border-box; /* Makes sure padding and borders don't add extra width to elements */
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
+  height: 100%;
   cursor:
     url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
@@ -237,8 +238,17 @@ svg {
 
 /* Adds a dashed border to help you see the box while you're designing */
 .border {
-  border: 1px dashed var(--color-accent-primary); /* This uses your custom accent color */
+  border: 1px solid var(--color-accent-primary); /* This uses your custom accent color */
   /* TODO: Delete this later – it’s just here to help you see the box while you work */
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--color-accent-primary);
+}
+
+.border-partial {
+  border-bottom: 1px solid var(--color-accent-primary);
+  border-top: 1px solid var(--color-accent-primary);
 }
 
 /* ---------------------- */
@@ -469,6 +479,7 @@ sup {
   line-height: 1.2;
   color: var(--color-text-project-description);
   margin-bottom: 1rem;
+  width: 60%;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -752,50 +763,50 @@ a.nav-link-primary:hover {
 /* Work wrapper (takes up available space) */
 .main-work-section {
   display: flex;
-  padding: 2.5rem;
+  padding: var(--padding-medium);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-  align-self: stretch;
 }
 .portfolio-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  align-self: stretch;
+  width: 100%;
+  min-height: 100%;
 }
 
 .portfolio-piece-large {
   border: 1px solid var(--color-accent-primary);
   display: flex;
-  width: 59.6875rem;
-  height: 45rem;
+  width: 40%;
   padding: 2.5rem;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   gap: 0.625rem;
+  background-image: url(assets/osten/osten.jpg);
 }
 
 .small-group {
   display: flex;
-  width: 28.42263rem;
+  width: 25%;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 2.125rem;
+  /* align-items: flex-start; */
+  gap: 3vh;
 }
 
 .portfolio-piece-small {
   border: 1px solid var(--color-accent-primary);
   display: flex;
-  height: 21.42856rem;
+  min-height: 35vh;
   padding: 2.5rem;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
   gap: 0.625rem;
-  align-self: stretch;
+  /* align-self: stretch; */
   aspect-ratio: 126/95;
 }
 .portfolio-text {
@@ -928,13 +939,12 @@ a.nav-link-primary:hover {
 /* -------------------------------------------------------------------------- */
 
 .footer-global {
-  padding-top: var(--padding-medium);
-  padding-right: var(--padding-small);
-  padding-bottom: var(--padding-small);
-  padding-left: var(--padding-small);
-  grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-  background: var(--color-bg-footer); /* Using CSS variable for theming */
-  /* Note: Using 'fr' units ensures proper scaling across devices */
+  display: flex;
+  height: 17.1875rem;
+  padding: var(--padding-medium);
+  justify-content: space-between;
+  align-items: flex-end;
+  align-self: stretch;
 }
 
 .footer-text {
@@ -983,14 +993,9 @@ a.nav-link-primary:hover {
 }
 .footer-socials-list {
   display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
-}
-
-.footer-social-item {
-  padding-right: 2rem;
-  padding-bottom: 1rem;
-  text-align: left;
+  align-items: center;
+  gap: 0.4375rem;
+  align-self: stretch;
 }
 
 .footer-social-link {
@@ -1015,28 +1020,9 @@ a.nav-link-primary:hover {
   line-height: 1.2; /* Consistent line height for footer items to improve spacing */
 }
 
-/* ------------------------------- */
-/* ▪️ Bullet List Style */
-/* Square bullets with compact spacing */
-/* ------------------------------- */
-
-.footer-bullet-list {
-  list-style-type: square;
-  list-style-position: inside;
-}
-
-.footer-bullet-list .footer-item {
-  padding-left: 0.5rem;
-  text-indent: -0.5rem; /* Pulls text back toward bullet */
-}
-
 /* -------------------------------------------------------------------------- */
 /* ✨ Footer Special Elements                                                 */
 /* -------------------------------------------------------------------------- */
-
-/* Heart icon for copyright/love notes */
-/*.heart {
-  color: var(--color-icon-heart); } /* Color for heart icon */
 
 .footer-fineprint {
   font-size: 0.875rem; /* Slightly smaller for disclaimers or captions */
@@ -1048,15 +1034,6 @@ a.nav-link-primary:hover {
   padding: 0.1rem;
   font-size: 0.8125rem;
   text-transform: uppercase;
-}
-
-/* -------------------------------------------------------------------------- */
-/* 🌐 MINIMAL FOOTER (ALTERNATIVE VERSION)                                    */
-/* A simpler alternative to the CSS Grid footer - ideal for beginners          */
-/* -------------------------------------------------------------------------- */
-
-.footer-global-wrapper {
-  padding: var(--padding-small);
 }
 
 /* 
@@ -1147,7 +1124,7 @@ a.nav-link-primary:hover {
 /* Project details section */
 .project-details {
   width: 100%;
-  padding: var(--padding-small);
+  padding: var(--padding-medium);
 }
 
 /* Previous/Next Arrow Styles */
@@ -1156,11 +1133,19 @@ a.nav-link-primary:hover {
   display: flex;
   flex-direction: row;
   flex: 1;
-  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
+  min-height: 5vh;
+  padding: 2rem 2rem;
 }
 
+.project-info {
+  padding: 1rem 2rem 6rem 2rem;
+}
+
+.project-text {
+  padding: 0rem 0rem 5rem 0rem;
+}
 /* Styling for left and right arrows */
 .arrow-left,
 .arrow-right {
@@ -1465,14 +1450,13 @@ to keep your styles reusable and consistent.
   .portfolio,
   .project-wrapper,
   .work-sidebar-wrapper {
-    padding: var(--padding-small);
   }
 
   /* Project Page Flex Direction on Large Devices */
 
   .project-wrapper,
   .work-sidebar-wrapper {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   /* Project Full Width Styles */
@@ -1481,7 +1465,31 @@ to keep your styles reusable and consistent.
     padding: var(--padding-small) var(--padding-jumbo);
   }
 
+  .project-header img {
+    width: 100%;
+    min-height: 80vh;
+    object-fit: cover;
+  }
   /* Sidebar on Large Devices */
+
+  .osten-wordmark-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 2rem;
+  }
+  .osten-wordmark-gif img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .osten-wordmark-smallgroup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 2rem;
+  }
 
   .project-aside {
     width: 35%;
@@ -1495,7 +1503,7 @@ to keep your styles reusable and consistent.
   /* Main Project Image Area on Large Devices */
 
   .project-details {
-    width: 65%;
+    width: 100%;
   }
 
   .project-image-container,
@@ -1517,7 +1525,7 @@ to keep your styles reusable and consistent.
   }
 
   .project-navigation {
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
   .arrow {
@@ -1545,13 +1553,21 @@ to keep your styles reusable and consistent.
   /* ------------------------------- */
 
   .footer-global {
-    padding-top: var(--padding-medium);
-    padding-right: var(--padding-jumbo);
-    padding-bottom: var(--padding-small);
-    padding-left: var(--padding-jumbo);
-    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    display: flex;
+    height: 17.1875rem;
+    padding: 2.5rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    align-self: stretch;
   }
 
+  .footer-text {
+    display: flex;
+    width: 12.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
   /* Column 1: Tagline/Message */
   .footer-tagline {
     display: flex;
@@ -1566,16 +1582,9 @@ to keep your styles reusable and consistent.
   /* Column 3: Contact & Social */
   .footer-contact-social {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-end;
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  }
-
-  .footer-social-item {
-    padding-left: 2rem;
-    text-align: right;
+    align-items: center;
+    gap: 0.4375rem;
+    align-self: stretch;
   }
 
   /* ------------------------------- */
