@@ -50,31 +50,61 @@ For comprehensive SEO resources tailored for designers, including sitemap best p
 -->
 
 
-<url>
-  <loc>https://portfolio-2022.netlify.app/</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://portfolio-2022.netlify.app/index.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://portfolio-2022.netlify.app/about.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://portfolio-2022.netlify.app/project-1.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://portfolio-2022.netlify.app/project-2.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
 
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://taylorelawrence.com/</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>1.0000</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/work.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.8000</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/index.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/about.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/illustration.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/project-1.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/project-2.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/project-3.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/project-4.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/project-5.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
+<url>
+<loc>https://taylorelawrence.com/project-6.html</loc>
+<lastmod>2026-11-04T20:27:47+00:00</lastmod>
+<priority>0.6400</priority>
+</url>
 </urlset>
