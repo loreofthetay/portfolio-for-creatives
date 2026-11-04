@@ -774,7 +774,6 @@ a.nav-link-primary:hover {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-height: 100%;
 }
 
 .portfolio-piece-large {
@@ -787,6 +786,8 @@ a.nav-link-primary:hover {
   /* align-items: flex-start; */
   gap: 0.625rem;
   background-image: url(assets/osten/osten.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .small-group {
@@ -1050,6 +1051,10 @@ a.nav-link-primary:hover {
 /* Project Page Layout - This section contains the layout for project pages,         */
 /* including the project image, description, sidebar, and navigation arrows.         */
 /* ---------------------------------------------------------------------------------- */
+
+.video {
+  margin: 0 0 2rem 0;
+}
 
 /* Wrapper for the main project section and sidebar */
 .project-wrapper,
