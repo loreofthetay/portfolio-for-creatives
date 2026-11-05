@@ -86,7 +86,7 @@
   /* Core Colours */
   --color-text-primary: #bbdf10;
   --color-accent-primary: #bbdf10;
-  --color-overlay-primary: rgba(0, 0, 0, 0.8);
+  --color-overlay-primary: transparent;
   --color-highlight: ff4d4b;
   --color-fallback: #bbdf10; /* Fallback color for glitch effect on 404 page */
   /* Backgrounds */
@@ -388,12 +388,12 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
   font-family: var(--font-body);
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  color: var(--h2-color);
   text-transform: lowercase;
+  line-height: 1.2;
+  color: var(--h2-color);
 }
 
 h3 {
@@ -475,11 +475,11 @@ sup {
 
 /* Project description text — pairs with the project title */
 .project-description {
-  font-size: 1.225rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   color: var(--color-text-project-description);
   margin-bottom: 1rem;
-  width: 60%;
+  width: 40%;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -533,6 +533,7 @@ sup {
 a:link {
   color: var(--color-link);
   text-decoration: none; /* Removes underline */
+  cursor: crosshair; /* Custom cursor (change the URL below to use your own) */
 }
 
 /* Visited link — after a user clicks and returns */
@@ -554,6 +555,10 @@ a:focus {
 a:active {
   color: var(--color-link-hover);
   /* Useful for mobile tap interactions */
+}
+
+a.no-hover-state {
+  color: var(--color-accent-primary);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -775,20 +780,19 @@ a.nav-link-primary:hover {
   align-items: center;
   width: 100%;
 }
-
+/* 
 .portfolio-piece-large {
   border: 1px solid var(--color-accent-primary);
   display: flex;
   width: 40%;
-  padding: 2.5rem;
   flex-direction: column;
   justify-content: flex-end;
-  /* align-items: flex-start; */
+
   gap: 0.625rem;
   background-image: url(assets/osten/osten.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 .small-group {
   display: flex;
@@ -838,11 +842,11 @@ a.nav-link-primary:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0; /* Initially invisible */
+  opacity: 1; /* Initially invisible */
   transition: var(--duration-slow) ease;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  align-items: flex-start;
   flex-direction: column;
   padding: var(--padding-small);
   background-color: var(
@@ -1056,6 +1060,10 @@ a.nav-link-primary:hover {
   margin: 0 0 2rem 0;
 }
 
+.img {
+  width: 100%;
+  object-fit: cover;
+}
 /* Wrapper for the main project section and sidebar */
 .project-wrapper,
 .work-sidebar-wrapper {
@@ -1149,7 +1157,7 @@ a.nav-link-primary:hover {
 }
 
 .project-text {
-  padding: 0rem 0rem 5rem 0rem;
+  padding: 10rem 0rem 4rem 0rem;
 }
 /* Styling for left and right arrows */
 .arrow-left,
@@ -1551,6 +1559,10 @@ to keep your styles reusable and consistent.
   .about-grid-text {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
+  }
+
+  .padding-medium {
+    padding: var(--padding-medium); /* smaller, mobile-safe default */
   }
 
   /* ------------------------------- */

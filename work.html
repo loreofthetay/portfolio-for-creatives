@@ -11,7 +11,14 @@
     <link
       rel="icon"
       type="images/svg+xml"
-      href="assets/branding-images/oddfishlogo-favicon.svg"
+      href="assets/branding-images/oddfishlogo-favicon-dark.svg"
+      media="(prefer-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="images/svg+xml"
+      href="assets/branding-images/oddfishlogo-favicon-light.svg"
+      media="(prefer-color-scheme: light)"
     />
     <link
       rel="icon"
@@ -89,9 +96,10 @@
 
     <main class="main-work-section">
       <section class="portfolio-container">
-        <div class="portfolio-piece-large">
+        <div class="portfolio-piece-large work-page-grid-item">
           <figure>
             <img
+              class="img"
               src="assets/osten/osten.jpg"
               width="1910"
               height="1440"
@@ -100,8 +108,8 @@
               class="aspect-ratio-maintain"
             />
           </figure>
-          <a href="project-1.html">
-            <div class="portfolio-text">
+          <a href="project-1.html" class="padding-medium no-hover-state">
+            <div class="portfolio-text project-details-overlay overlay">
               <h1 class="work-grid-project-title">Unlike</h1>
               <h4 class="work-grid-project-category">Branding / Motion</h4>
             </div>
