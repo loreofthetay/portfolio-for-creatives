@@ -970,6 +970,8 @@ a.nav-link-primary:hover {
 .footer-branding {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  justify-self: flex-end;
+  align-self: flex-end;
 }
 
 /* ------------------------------- */
