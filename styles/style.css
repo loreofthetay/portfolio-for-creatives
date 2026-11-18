@@ -645,6 +645,7 @@ a.nav-link-primary:hover {
   min-height: 5rem; /* Space reserved for logo + nav */
   position: relative;
   z-index: 3;
+  background: blue;
 }
 
 .nav-branding {
@@ -654,6 +655,7 @@ a.nav-link-primary:hover {
   padding: var(--padding-small);
   align-items: center;
   background-color: var(--color-bg);
+  background: red;
 }
 
 .nav-branding-group {
@@ -1367,6 +1369,7 @@ to keep your styles reusable and consistent.
 
   .hero {
     min-height: 120vh;
+    background: hotpink;
   }
 
   .hero-headline-wrapper {
