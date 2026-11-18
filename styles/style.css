@@ -104,7 +104,7 @@
   --color-link: #bbdf10;
   --color-link-hover: #ccff75;
   --color-link-visited: #bbdf10;
-  --color-bg-selection: red;
+  --color-bg-selection: #ccff75;
   /* Navigation */
   --color-nav-link: #bbdf10;
   --color-nav-link-hover: #ccff75;
@@ -157,7 +157,7 @@ html {
   scroll-behavior: smooth; /* Adds smooth scrolling between sections */
   height: 100%;
   cursor:
-    url("../assets/temp/up-cursor.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
+    url("../assets/branding-images/cursor-nohover.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
 
   /* TODO: Replace the URL above to add a custom cursor. 
      If you want to use the default browser cursor, just delete this line. */
@@ -393,8 +393,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  font-weight: 400;
   font-family: var(--font-body);
   text-transform: lowercase;
   line-height: 1.2;
@@ -538,7 +538,8 @@ sup {
 a:link {
   color: var(--color-link);
   text-decoration: none; /* Removes underline */
-  cursor: crosshair; /* Custom cursor (change the URL below to use your own) */
+  cursor:
+    url("../assets/branding-images/cursor-hover.png"), auto !important; /* Custom cursor (change the URL below to use your own) */
 }
 
 /* Visited link — after a user clicks and returns */
@@ -673,8 +674,9 @@ a.nav-link-primary:hover {
 .hero-headline-wrapper {
   flex: 1;
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-direction: column;
   padding: 1rem;
   position: relative;
   z-index: 2;
@@ -780,25 +782,26 @@ a.nav-link-primary:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 4vh;
 }
 .portfolio-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: space-between;
   width: 100%;
-  gap: 2rem;
+  gap: 3vh;
 }
 
 .portfolio-piece-large {
-  width: 68%;
+  width: 100%;
   height: auto;
   position: relative;
 }
 
 .small-group {
   display: flex;
-  width: 32%;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   gap: 3vh;
@@ -1305,7 +1308,7 @@ to keep your styles reusable and consistent.
   }
 
   h2 {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
   }
 
   h3 {
@@ -1385,21 +1388,39 @@ to keep your styles reusable and consistent.
   .overlay-container {
     margin: 1rem;
   } */
+  .portfolio-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .portfolio-piece-large {
+    width: 68%;
+    height: auto;
+    position: relative;
+  }
+
+  .small-group {
+    display: flex;
+    width: 32%;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3vh;
+  }
+
+  .portfolio-piece-small {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
   .work-grid-project-title {
     font-size: 2.5rem;
   }
   .work-grid-project-category {
     font-size: 0.9375rem;
-  }
-  /* Grayscale filter with full-colour on hover and tap */
-
-  .work-page-grid-item a.grayscale img {
-    filter: grayscale(100);
-  }
-
-  .work-page-grid-item > a.grayscale:active img,
-  .work-page-grid-item > a.grayscale:hover img {
-    filter: grayscale(0);
   }
 
   /* Padding around work grid and project page */
@@ -1429,19 +1450,19 @@ to keep your styles reusable and consistent.
   }
   /* Sidebar on Large Devices */
 
-  .osten-wordmark-group {
+  .wordmark-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     gap: 2rem;
   }
-  .osten-wordmark-gif img {
+  .wordmark-gif img {
     width: 100%;
     object-fit: cover;
   }
 
-  .osten-wordmark-smallgroup {
+  .wordmark-smallgroup {
     display: flex;
     flex-direction: row;
     width: 100%;
