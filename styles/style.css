@@ -353,24 +353,6 @@ svg {
   padding-top: 56.25%; /* 16:9 Aspect Ratio (because 9 ÷ 16 = 0.5625) */
   margin-bottom: 1rem;
 }
-/* The iframe is absolutely positioned to fill the container */
-.responsive-iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 56.25vw;
-  transform: translate(-50%, -50%);
-  min-height: 100%;
-  min-width: 177.78vh;
-  border: 0;
-}
-
-.hero-video {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
 
 /* ------------------------------------------------------------------ */
 /* 🔤 Global & Mobile Typography                                      */
@@ -632,20 +614,12 @@ a.nav-link-primary:hover {
 /* Great place for first impression and personal branding                    */
 /* -------------------------------------------------------------------------- */
 
-.hero {
-  width: 100%;
-  min-height: 80vh; /* Takes up most of the screen height */
-  display: flex;
-  flex-direction: column;
-  position: relative; /* Required for video background */
-  overflow: hidden; /* Required for video background */
-}
-
 .hero-header {
   min-height: 5rem; /* Space reserved for logo + nav */
   position: relative;
   z-index: 3;
-  background: blue;
+  background: rgb(109, 109, 181, 0.8);
+  padding: 0.5rem;
 }
 
 .nav-branding {
@@ -655,7 +629,7 @@ a.nav-link-primary:hover {
   padding: var(--padding-small);
   align-items: center;
   background-color: var(--color-bg);
-  background: red;
+  background: rgb(128, 0, 128, 0.7);
 }
 
 .nav-branding-group {
@@ -677,21 +651,70 @@ a.nav-link-primary:hover {
   /* TODO: Adjust the width of the logo on mobile devices here */
 }
 
-.hero-headline-wrapper {
-  flex: 1;
+/* HERO VIDEO OVERLAY SECTION */
+
+.hero {
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  position: relative; /* Required for video background */
+  overflow: hidden; /* Required for video background */
+}
+
+.hero-headline-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
-  flex-direction: column;
   padding: 1rem;
-  position: relative;
-  z-index: 2;
+  box-sizing: border-box;
+  pointer-events: none;
 }
 
 .wordmark {
-  width: 35rem;
-  max-width: 100%;
+  display: block;
+  width: min(
+    100%,
+    900px
+  ); /* Full width up to 900px max; shrinks smoothly on mobile */
+  aspect-ratio: 1405 / 235; /* Exact viewBox ratio from your SVG */
+  height: auto;
+  pointer-events: auto; /* Keeps your SVGator interactive JS clickable */
 }
+
+/* The iframe is absolutely positioned to fill the container */
+.responsive-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: green;
+  padding: 0.5rem;
+  border: 5px solid red;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* END OF VIDEO HERO OVERLAY SECTION */
 
 .hero-icon {
   font-size: 4rem;
@@ -1368,8 +1391,9 @@ to keep your styles reusable and consistent.
   }
 
   .hero {
-    min-height: 120vh;
+    /* min-height: 120vh; */
     background: hotpink;
+    padding: 0.5rem;
   }
 
   .hero-headline-wrapper {
