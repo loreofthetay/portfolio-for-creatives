@@ -458,7 +458,7 @@ sup {
 
 /* Large project title — appears on individual project pages */
 .project-title {
-  font-size: 3.625rem;
+  font-size: 1.7rem;
   font-family: var(--font-family-project-title);
   color: var(--color-text-project-title);
   margin-bottom: 1rem;
@@ -466,11 +466,11 @@ sup {
 
 /* Project description text — pairs with the project title */
 .project-description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.2;
   color: var(--color-text-project-description);
   margin-bottom: 1rem;
-  width: 40%;
+  width: 95%;
 }
 
 /* 🧱 Full-width headings — useful in layouts that span edge-to-edge */
@@ -618,8 +618,7 @@ a.nav-link-primary:hover {
   min-height: 5rem; /* Space reserved for logo + nav */
   position: relative;
   z-index: 3;
-  background: rgb(109, 109, 181, 0.8);
-  padding: 0.5rem;
+  background: var(--color-bg);
 }
 
 .nav-branding {
@@ -629,7 +628,6 @@ a.nav-link-primary:hover {
   padding: var(--padding-small);
   align-items: center;
   background-color: var(--color-bg);
-  background: rgb(128, 0, 128, 0.7);
 }
 
 .nav-branding-group {
@@ -678,7 +676,7 @@ a.nav-link-primary:hover {
   display: block;
   width: min(
     100%,
-    900px
+    550px
   ); /* Full width up to 900px max; shrinks smoothly on mobile */
   aspect-ratio: 1405 / 235; /* Exact viewBox ratio from your SVG */
   height: auto;
@@ -699,9 +697,6 @@ a.nav-link-primary:hover {
   position: relative;
   overflow: hidden;
   box-sizing: border-box;
-  background: green;
-  padding: 0.5rem;
-  border: 5px solid red;
   width: 100%;
   aspect-ratio: 3024 / 1496;
 }
@@ -1001,7 +996,7 @@ a.nav-link-primary:hover {
 .footer-branding {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
-  justify-self: flex-end;
+  justify-self: flex-start;
   align-self: flex-end;
 }
 
@@ -1133,7 +1128,7 @@ a.nav-link-primary:hover {
 }
 
 .project-text {
-  padding: 10rem 0rem 4rem 0rem;
+  padding: 5rem 0rem 3rem 0rem;
 }
 /* Styling for left and right arrows */
 .arrow-left,
@@ -1392,8 +1387,6 @@ to keep your styles reusable and consistent.
 
   .hero {
     /* min-height: 120vh; */
-    background: hotpink;
-    padding: 0.5rem;
   }
 
   .hero-headline-wrapper {
@@ -1510,6 +1503,9 @@ to keep your styles reusable and consistent.
   }
 
   /* Main Project Image Area on Large Devices */
+  .project-title {
+    font-size: 3rem;
+  }
 
   .project-details {
     width: 100%;
@@ -1518,6 +1514,11 @@ to keep your styles reusable and consistent.
   .project-image-container,
   .project-description-container {
     flex-direction: row;
+  }
+
+  .project-description {
+    width: 40%;
+    font-size: 1.1rem;
   }
 
   .section-container {
@@ -1576,6 +1577,7 @@ to keep your styles reusable and consistent.
   .footer-branding {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    justify-self: flex-end;
   }
 
   /* Work Sidebar on Large Devices */
